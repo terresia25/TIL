@@ -1,2 +1,5 @@
-﻿  testaskii.cpp
-  Project1.vcxproj -> C:\Users\SBA\source\repos\Project1\x64\Debug\Project1.exe
+﻿  1157.cpp
+  2444.cpp
+C:\Users\SBA\source\repos\terresia25\TIL\subaksu\Project1\2444.cpp(5,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  코드를 생성하고 있습니다...
+  Project1.vcxproj -> C:\Users\SBA\source\repos\terresia25\TIL\subaksu\x64\Debug\Project1.exe
