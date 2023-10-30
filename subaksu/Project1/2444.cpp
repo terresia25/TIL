@@ -1,49 +1,28 @@
 #include <iostream>
-#include <vector>
-#include <string>
 
-void main() {
-	int Number;
-	std::cin >> Number;
-	int lows = (Number * 2) - 1;
-	std::string starlines;
+int main() {
+	int N;
+	std::cin >> N;
 
-	for (int i = 0; i < lows; i++)
-	{
-		for (int t = 0; t < lows; t++)
-		{
-			if (i < Number - 1) {
-				for (int j = 0; j < lows; j++)
-				{
-					starlines[j] = '*';
-				}
-				for (int count = Number - 1 - i; count > 0; count--) {
-					starlines[count] = ' ';
-				}
-				for (int count2 = Number + 1 + i; count2 > Number; count2--) {
-					starlines[count2] = ' ';
-				}
-			}
-			else if ((i + 1) == Number) {
-				for (int k = 0; k < lows; k++) {
-					starlines[k] = ' ';
-				}
-			}
-			else {
-				for (int j = 0; j < lows; j++)
-				{
-					starlines[j] = '*';
-				}
-				for (int count = Number - 1 - i; count > 0; count--) {
-					starlines[count] = ' ';
-				}
-				for (int count2 = Number + 1 + i; count2 > Number; count2--) {
-					starlines[count2] = ' ';
-				}
-			}
+	for (int i = 1; i <= N; i++) {//1~N번째 줄 출력
+		for (int j = N - i; j > 0; j--) {
+			std::cout << " ";
 		}
-		std::cout << starlines;
+		for (int k = 2 * i - 1; k > 0; k--) {
+			std::cout << "*";
+		}
+
+		std::cout << std::endl;
 	}
 
+	for (int i = 1; i < N; i++) {//N에서 2N-1번째 줄 출력
+		for (int j = 0; j < i; j++) {
+			std::cout << " ";
+		}
+		for (int k = 2 * (N - i) - 1; k > 0; k--) {
+			std::cout << "*";
+		}
 
+		std::cout << std::endl;
+	}
 }
