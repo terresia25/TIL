@@ -10,10 +10,10 @@ int main() {
     for (int i = 0; i < ready.size(); i++)
     {
         while (1) {
-            index = str.find(ready[i]);//find 함수를 통해 벡터로 선언한 조건 단어들을 찾아서 인덱스에 넣기
-            if (index == std::string::npos)//index의 값이 npos, find함수에서 문자열을 찾지 못했을 때 리턴되는 값
+            index = str.find(ready[i]);
+            if (index == std::string::npos)
                 break;
-            str.replace(index, ready[i].length(), "#");//ready의 값을 #으로 바꿔주는 함수
+            str.replace(index, ready[i].length(), "#");
         }
     }
     std::cout << str.length();
